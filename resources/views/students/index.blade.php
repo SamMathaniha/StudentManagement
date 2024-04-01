@@ -1,11 +1,17 @@
 @extends('students.layout')
+
 @section('content')
-    <div class="container">
-        <div class="row">
+    <div class="container col-md-9 mt-5">
+        <!-- back button -->
+        <div class="text-right mb-3">
+            <a href="{{ url('/dashboard') }}" class="btn btn-danger">Back to Dashboard</a>
+        </div>
+        
+        <div class="row justify-content-center"> <!-- Center the row horizontally -->
             <div class="col-md-9">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Laravel Crud</h2>
+                        <h2>View Student Details</h2>
                     </div>
                     <div class="card-body">
                         <a href="{{ url('dashboard/students/create') }}" class="btn btn-success btn-sm" title="Add New Student">

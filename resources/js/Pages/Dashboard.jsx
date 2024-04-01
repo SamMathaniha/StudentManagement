@@ -7,7 +7,7 @@ export default function Dashboard({ auth }) {
     return (
         <AuthenticatedLayout
             user={auth.user}
-            header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Dashboard</h2>}
+            header={<h2 className="font-semibold text-xl text-gray-800 leading-tight">Student Management System</h2>}
             
         >
             <Head title="Dashboard" /> 
@@ -21,7 +21,7 @@ export default function Dashboard({ auth }) {
                     </div>    
                 </div>
                 {/* Box with an icon representing students */}
-            <div className="py-3 flex justify-center">
+            <div className="py-3 flex justify-center  mt-10">
                 <div className="bg-gray-200 rounded-full p-5">
                     <FaUserGraduate className="text-5xl text-blue-500" />
                 </div>

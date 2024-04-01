@@ -28,15 +28,15 @@ export default function Login({ status, canResetPassword }) {
     };
 
     return (
-        <GuestLayout>
+        <GuestLayout >
             <Head title="Log in" />
 
             {status && <div className="mb-4 font-medium text-sm text-green-600">{status}</div>}
        
-            <div className="login-form" > {/* Apply background style here */}
+            <div className="login-form" > 
                 <form onSubmit={submit}>
                     <div>
-                        <InputLabel htmlFor="email" value="Email" />
+                        <InputLabel htmlFor="email" value="Email"  className='input-label'/>
                         <TextInput
                             id="email"
                             type="email"
@@ -47,11 +47,11 @@ export default function Login({ status, canResetPassword }) {
                             isFocused={true}
                             onChange={(e) => setData('email', e.target.value)}
                         />
-                        <InputError message={errors.email} className="mt-2" />
+                        <InputError message={errors.email} className="input-error" />
                     </div>
 
                     <div className="mt-4">
-                        <InputLabel htmlFor="password" value="Password" />
+                        <InputLabel htmlFor="password" value="Password" className='input-label' />
                         <TextInput
                             id="password"
                             type="password"
@@ -61,7 +61,7 @@ export default function Login({ status, canResetPassword }) {
                             autoComplete="current-password"
                             onChange={(e) => setData('password', e.target.value)}
                         />
-                        <InputError message={errors.password} className="mt-2" />
+                        <InputError message={errors.password} className="input-error" />
                     </div>
 
                     <div className="block mt-4">
@@ -71,7 +71,7 @@ export default function Login({ status, canResetPassword }) {
                                 checked={data.remember}
                                 onChange={(e) => setData('remember', e.target.checked)}
                             />
-                            <span className="ms-2 text-sm text-gray-600">Remember me</span>
+                            <span className="Remember-label">Remember me</span>
                         </label>
                     </div>
 
@@ -79,7 +79,7 @@ export default function Login({ status, canResetPassword }) {
                         {canResetPassword && (
                             <Link
                                 href={route('password.request')}
-                                className="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                className="forgotPassword"
                             >
                                 Forgot your password?
                             </Link>

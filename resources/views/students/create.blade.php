@@ -2,12 +2,16 @@
 
 @section('content')
 
-<div class="container">
-    <div class="row">
+<div class="container mt-5"> <!-- Add margin-top -->
+    <div class="row justify-content-center"> <!-- Center the row horizontally -->
         <div class="col-md-9">
+            <!-- back button -->
+        <div class="text-right mb-3">
+            <a href="{{ url('/dashboard/students') }}" class="btn btn-danger">Back to View</a>
+        </div>
             <div class="card">
                 <div class="card-header">
-                    <h2>Laravel Crud</h2>
+                    <h2>Add New Student Details</h2>
                 </div>
                 <div class="card-body">
                     <form action="{{ url('dashboard/students') }}" method="post" enctype="multipart/form-data">
